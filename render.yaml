@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: shidaizumi-catalog
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_SHEET_CSV_URL
+        sync: false
