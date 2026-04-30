@@ -65,7 +65,7 @@ function ProductList({ lang, setLang, t }) {
           <p className="text-xs text-gray-400 mt-4 mb-3 text-right">
             {t.count(filtered.length)}
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 md:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-4">
             {filtered.map((product) => (
               <ProductCard
                 key={product.id}
