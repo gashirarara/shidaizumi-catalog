@@ -5,8 +5,8 @@
 @layer base {
   body {
     @apply font-sans;
-    background-color: #fdf6ec;
-    color: #1a1208;
+    background-color: #f7f5f2;
+    color: #1a1a1a;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
   }
@@ -30,18 +30,6 @@
   }
 
   .btn-chip-inactive {
-    @apply bg-white text-[#2c2c2c] border-gray-200 hover:border-[#c9a84c] hover:text-[#c9a84c];
-  }
-
-  .spec-row {
-    @apply flex justify-between items-center py-3 border-b border-gray-100 last:border-0;
-  }
-
-  .spec-label {
-    @apply text-sm text-gray-500 font-medium;
-  }
-
-  .spec-value {
-    @apply text-base text-[#1a1208] font-bold;
+    @apply bg-white text-[#1a1a1a] border-gray-200 hover:border-[#c9a84c] hover:text-[#c9a84c];
   }
 }

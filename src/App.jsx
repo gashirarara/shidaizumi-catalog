@@ -122,7 +122,7 @@ export default function App() {
   const t = lang === 'ja' ? ja : en;
 
   return (
-    <div className="min-h-screen bg-[#fdf6ec]">
+    <div className="min-h-screen bg-[#f7f5f2]">
       <Header t={t} lang={lang} onLangChange={setLang} />
 
       <Routes>
@@ -130,10 +130,42 @@ export default function App() {
         <Route path="/products/:id" element={<ProductDetailPage lang={lang} t={t} />} />
       </Routes>
 
-      <footer className="mt-12 py-6 border-t border-gray-100 text-center">
-        <p className="text-xs text-gray-300 font-serif">
-          志太泉酒造 / SHIDAIZUMI SAKE BREWERY — 静岡県藤枝市
-        </p>
+      <footer className="mt-16 bg-[#1a2744] text-white">
+        <div className="h-px bg-gradient-to-r from-transparent via-[#c9a84c] to-transparent opacity-50" />
+        <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text-center sm:text-left">
+            <p className="font-serif text-base font-semibold">志太泉酒造</p>
+            <p className="text-[#c9a84c] text-xs tracking-widest mt-0.5">SHIDAIZUMI SAKE BREWERY</p>
+            <p className="text-white/40 text-xs mt-1">静岡県藤枝市宮原423-22-1</p>
+          </div>
+          <div className="flex items-center gap-5">
+            <a href="https://shidaizumi.com/" target="_blank" rel="noopener noreferrer"
+               className="flex flex-col items-center gap-1 text-white/50 hover:text-[#c9a84c] transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8}
+                  d="M12 21a9 9 0 100-18 9 9 0 000 18zm0 0c-2.5 0-4-4-4-9s1.5-9 4-9m0 18c2.5 0 4-4 4-9s-1.5-9-4-9M3.5 9h17M3.5 15h17" />
+              </svg>
+              <span className="text-[10px] tracking-wider">WEBSITE</span>
+            </a>
+            <a href="https://www.instagram.com/shidaizumishuzo/" target="_blank" rel="noopener noreferrer"
+               className="flex flex-col items-center gap-1 text-white/50 hover:text-[#c9a84c] transition-colors">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" strokeWidth={1.8} />
+                <circle cx="12" cy="12" r="4" strokeWidth={1.8} />
+                <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" />
+              </svg>
+              <span className="text-[10px] tracking-wider">INSTAGRAM</span>
+            </a>
+            <a href="https://www.facebook.com/p/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE-%E5%BF%97%E5%A4%AA%E6%B3%89%E9%85%92%E9%80%A0-100057480369756/"
+               target="_blank" rel="noopener noreferrer"
+               className="flex flex-col items-center gap-1 text-white/50 hover:text-[#c9a84c] transition-colors">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+              <span className="text-[10px] tracking-wider">FACEBOOK</span>
+            </a>
+          </div>
+        </div>
       </footer>
     </div>
   );
