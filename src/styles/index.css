@@ -4,8 +4,11 @@
 
 @layer base {
   body {
-    @apply font-sans bg-[#faf8f4] text-[#2c2c2c];
+    @apply font-sans;
+    background-color: #fdf6ec;
+    color: #1a1208;
     -webkit-font-smoothing: antialiased;
+    font-size: 16px;
   }
 
   h1, h2, h3 {
@@ -15,34 +18,30 @@
 
 @layer components {
   .btn-chip {
-    @apply px-4 py-2 rounded-full text-sm font-medium border transition-all duration-200 whitespace-nowrap;
+    @apply px-4 rounded-full text-sm font-bold border transition-all duration-200 whitespace-nowrap;
     min-height: 44px;
     display: inline-flex;
     align-items: center;
   }
 
   .btn-chip-active {
-    @apply bg-[#1a2744] text-white border-[#1a2744];
+    @apply text-white border-transparent;
+    background-color: #1a2744;
   }
 
   .btn-chip-inactive {
     @apply bg-white text-[#2c2c2c] border-gray-200 hover:border-[#c9a84c] hover:text-[#c9a84c];
   }
 
-  .product-card {
-    @apply bg-white border border-gray-100 rounded-xl overflow-hidden cursor-pointer
-           transition-all duration-300 hover:shadow-lg hover:border-[#c9a84c] hover:-translate-y-0.5;
-  }
-
   .spec-row {
-    @apply flex justify-between items-center py-2 border-b border-gray-100 last:border-0;
+    @apply flex justify-between items-center py-3 border-b border-gray-100 last:border-0;
   }
 
   .spec-label {
-    @apply text-xs text-gray-500 font-medium;
+    @apply text-sm text-gray-500 font-medium;
   }
 
   .spec-value {
-    @apply text-sm text-[#2c2c2c] font-medium;
+    @apply text-base text-[#1a1208] font-bold;
   }
 }

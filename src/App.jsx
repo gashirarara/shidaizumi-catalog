@@ -122,7 +122,7 @@ export default function App() {
   const t = lang === 'ja' ? ja : en;
 
   return (
-    <div className="min-h-screen bg-[#faf8f4]">
+    <div className="min-h-screen bg-[#fdf6ec]">
       <Header t={t} lang={lang} onLangChange={setLang} />
 
       <Routes>
